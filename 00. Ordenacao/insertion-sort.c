@@ -1,30 +1,25 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-void static Swap (int* a, int* b) {
-  int temp = *a;
-  *a = *b;
-  *b = temp;
-}
-
 /*
- * Selection Sort
- *
- * Para cada i de 1 a N-1, realiza a troca de
- * a[i] com o menor elemento em a[i] ... a[N]
- *
+ * Insertion Sort
+ * Os elementos à esquerda do índice i estão ordenados,
+ * mas não estão em sua posição final, pois podem ter que 
+ * ser movidos para abrir espaço para elementos menores 
+ * encontrados posteriormente.
  */
-void selectionSort(int* a, int N) {
-  int i, j, min;
+void insertionSort(int* a, int N) {
+  int i, j, v;
 
-  for (i=1; i<N-1; i++) {
-    min = i;
+  for (j=2; j<N; j++) {
+    v = a[j];
+    i = j - 1;
+    while (i > 0 && a[i] > v) {
+      a[i + 1] = a[i];
+      i--;
+    }
 
-    for (j=i+1; j<N; j++) 
-      if (a[j] < a[min])
-        min = j;
-
-    Swap(&a[min], &a[i]);
+    a[i + 1] = v;
   }
 }
 
@@ -49,7 +44,7 @@ int main (int argc, char *argv[]) {
   int* a = NULL;
 
   a = initArray(&N, a);
-  selectionSort(a,N);
+  insertionSort(a, N);
 
   for (int i=0; i<N; i++) 
     printf("%d\n", a[i]);

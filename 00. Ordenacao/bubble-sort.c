@@ -7,25 +7,21 @@ void static Swap (int* a, int* b) {
   *b = temp;
 }
 
+
 /*
- * Selection Sort
- *
- * Para cada i de 1 a N-1, realiza a troca de
- * a[i] com o menor elemento em a[i] ... a[N]
- *
+ * Bubble Sort
+ * Continua passando pelos elementos do arquivo,
+ * trocando elementos subjacentes, se necessario;
+ * Quando nenhuma troca eh necessaria dada uma
+ * passagem, o arquivo esta ordenado.
  */
-void selectionSort(int* a, int N) {
-  int i, j, min;
+void bubbleSort(int* a, int N) {
+  int i, j;
 
-  for (i=1; i<N-1; i++) {
-    min = i;
-
-    for (j=i+1; j<N; j++) 
-      if (a[j] < a[min])
-        min = j;
-
-    Swap(&a[min], &a[i]);
-  }
+  for (i=1; i<N; i++) 
+    for (j=0; j< N-1; j++)
+      if (a[j] > a[j+1])
+        Swap(&a[j], &a[j+1]);
 }
 
 int* initArray(int* N, int* a) {
@@ -49,7 +45,7 @@ int main (int argc, char *argv[]) {
   int* a = NULL;
 
   a = initArray(&N, a);
-  selectionSort(a,N);
+  bubbleSort(a, N);
 
   for (int i=0; i<N; i++) 
     printf("%d\n", a[i]);
