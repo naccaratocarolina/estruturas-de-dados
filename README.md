@@ -1,7 +1,13 @@
 # Algoritmos & Estruturas de Dados
 
 ## Índice
-[[_TOC_]]
+* [Ordenacao][#00.-ordenacao]
+* [Arvores][#01.-arvores]
+* [Hashing][#02.-hashing]
+* [Listas Encadeadas][#03.-listas-encadeadas]
+* [Pilhas e Filas][#04.-pilhas-e-filas]
+* [Grafos][#05.-grafos]
+* [Programacao Dinamica][#06.-programacao-dinamica]
 
 ## 00. Ordenacao
 - [x] Insertion Sort
