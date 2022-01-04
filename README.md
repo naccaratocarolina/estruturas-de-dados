@@ -31,7 +31,8 @@
 - [ ] Table doubling
 
 ## Listas Encadeadas
-- [ ] Listas Encadeadas em vetores
+- [ ] Alocação sequencial
+- [ ] Alocação encadeada
 
 ## Pilhas e Filas
 - [x] Pushdown Stack
