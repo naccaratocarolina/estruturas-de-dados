@@ -32,7 +32,7 @@
 
 ## Listas Encadeadas
 - [ ] Alocação sequencial
-- [ ] Alocação encadeada
+- [x] Alocação encadeada
 
 ## Pilhas e Filas
 - [x] Pushdown Stack
