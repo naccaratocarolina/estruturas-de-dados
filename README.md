@@ -35,8 +35,9 @@
 - [x] Alocação encadeada
 
 ## Pilhas e Filas
-- [x] Pushdown Stack
-- [x] Queue
+- [x] Pilha em vetor
+- [x] Pilha em lista encadeada com nó cabeça
+- [ ] Fila em vetor
 
 ## Grafos
 - [ ] Breadth-first search (BFS)
